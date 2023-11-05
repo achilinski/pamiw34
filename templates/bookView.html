@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book.title }}</title>
+</head>
+<body>
+<h1>{{ book.title }}</h1>
+<a>author : {{ book.author }}</a>
+<br>
+<a>rating : {{ book.rating }}</a>
+<br>
+<a>publishing date: {{ book.date_of_publishing }}</a>
+<br>
+<form action="{% url 'delete-item' book.id %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+</form>
+<form action="{% url 'edit-book' book.id %}" method="get">
+    <input type="submit" value="Edit">
+</form>
+</body>
+</html>

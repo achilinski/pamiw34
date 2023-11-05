@@ -1,0 +1,13 @@
+{
+  "ApiSettings": {
+    "BaseUrl": "http://127.0.0.1:8000/api/",
+    "DeleteUrl": "delete-book/",
+    "GetAllUrl": "get-all/",
+    "BestRatingUrl": "best-rating/",
+    "NewestBooksUrl": "newest-books/",
+    "GetBookByIdUrl" : "book-id",
+    "AddNewBookUrl": "create-book/",
+    "DeleteBookUrl": "delete-book/",
+    "UpdateBookUrl": "update-book/"
+  }
+}
