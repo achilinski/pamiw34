@@ -16,19 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from . import views
+from . import controller
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('api/', include('api.api_urls')),
-    path('', views.index, name='index'),
-    path('allBooks',views.allBooksView, name='allBooks'),
-    path('bestBooks', views.bestBooks, name = 'bestBooks'),
-    path('addBook/', views.add_book, name='addBook'),
-    path('newestBooks', views.newestBooks, name = 'newestBooks'),
-    path("book/<int:id>",views.bookView, name = 'bookView'),
-    path('delete/<int:book_id>', views.deleteBookButton, name = 'delete-item'),
-    path('edit-book/<int:book_id>/', views.edit_book, name='edit-book'),
+    path('', controller.index, name='index'),
+    path('allBooks',controller.allBooksView, name='allBooks'),
+    path('bestBooks', controller.bestBooks, name = 'bestBooks'),
+    path('addBook/', controller.add_book, name='addBook'),
+    path('newestBooks', controller.newestBooks, name = 'newestBooks'),
+    path("book/<int:id>",controller.bookView, name = 'bookView'),
+    path('delete/<int:book_id>', controller.deleteBookButton, name = 'delete-item'),
+    path('edit-book/<int:book_id>/', controller.edit_book, name='edit-book'),
 
 ]
